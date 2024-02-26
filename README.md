@@ -1,4 +1,4 @@
-This is a [Kobweb](https://github.com/varabyte/kobweb) project using [KotlinBootstrap] (https://github.com/stevdza-san/KotlinBootstrap) framework for some UI elements and [Exposed] (https://github.com/JetBrains/Exposed) as an ORM.
+This is a [Kobweb](https://github.com/varabyte/kobweb) project using [KotlinBootstrap](https://github.com/stevdza-san/KotlinBootstrap) framework for some UI elements and [Exposed](https://github.com/JetBrains/Exposed) ORM framework
 
 
 ## Getting Started
