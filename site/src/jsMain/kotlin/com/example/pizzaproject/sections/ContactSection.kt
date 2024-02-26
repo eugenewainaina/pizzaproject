@@ -66,6 +66,19 @@ fun contactUsSection() {
 
         P {}
 
+        Row(
+            modifier =
+                Modifier
+                    .fillMaxWidth()
+                    .fontWeight(2)
+                    .color(Color("#FDF0D0")),
+            horizontalArrangement = Arrangement.Center,
+        ) {
+            Text("Ready to embark on your pizza adventure? We're just a click away!")
+        }
+
+        P {}
+
         Text(value = "Telephone: ")
         Spacer()
 

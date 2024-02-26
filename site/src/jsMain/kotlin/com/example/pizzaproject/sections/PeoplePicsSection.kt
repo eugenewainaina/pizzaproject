@@ -12,10 +12,7 @@ import com.varabyte.kobweb.compose.ui.modifiers.backgroundColor
 import com.varabyte.kobweb.compose.ui.modifiers.fillMaxWidth
 import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.theme.breakpoint.rememberBreakpoint
-import org.jetbrains.compose.web.css.CSSSizeValue
-import org.jetbrains.compose.web.css.CSSUnit
-import org.jetbrains.compose.web.css.Color
-import org.jetbrains.compose.web.css.px
+import org.jetbrains.compose.web.css.*
 
 @Composable
 fun peoplePicsSection() {
@@ -38,7 +35,8 @@ fun peoplePicsSection() {
         Row {
             BSCarousel(
                 showControls = false,
-                showIndicators = true,
+                showIndicators = false,
+                crossFade = true,
                 items =
                     listOf(
                         CarouselItem(
@@ -51,7 +49,7 @@ fun peoplePicsSection() {
                         ),
                         CarouselItem(
                             image = "people/people 3.jpg",
-                            title = "Joy",
+                            title = "Love for the craft",
                         ),
                         CarouselItem(
                             image = "people/people 4.jpg",
@@ -72,7 +70,8 @@ fun peoplePicsSection() {
         Row {
             BSCarousel(
                 showControls = false,
-                showIndicators = true,
+                showIndicators = false,
+                crossFade = true,
                 items =
                     listOf(
                         CarouselItem(
@@ -85,7 +84,7 @@ fun peoplePicsSection() {
                         ),
                         CarouselItem(
                             image = "people/people 8.jpg",
-                            title = "Can't get enough",
+                            title = "Simply delicious",
                         ),
                         CarouselItem(
                             image = "people/people 9.jpg",
@@ -93,7 +92,7 @@ fun peoplePicsSection() {
                         ),
                         CarouselItem(
                             image = "people/people 10.jpg",
-                            title = "Through time",
+                            title = "Timeless",
                         ),
                     ),
                 objectFit = ObjectFit.Cover,
@@ -103,3 +102,7 @@ fun peoplePicsSection() {
         }
     }
 }
+
+fun isEven(a: Int): Boolean = !isOdd(a)
+
+fun isOdd(a: Int): Boolean = !isEven(a)

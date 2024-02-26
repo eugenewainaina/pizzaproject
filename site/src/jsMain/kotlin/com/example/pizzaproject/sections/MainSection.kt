@@ -19,6 +19,8 @@ import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.components.style.toModifier
 import com.varabyte.kobweb.silk.theme.breakpoint.rememberBreakpoint
 import kotlinx.browser.window
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 import org.jetbrains.compose.web.css.Color
 import org.jetbrains.compose.web.css.percent
 import org.jetbrains.compose.web.css.px
@@ -32,6 +34,12 @@ const val AGENT_URL = "https://console.dialogflow.com/api-client/demo/embedded/6
 fun mainSection() {
     var agentButtonClicked by remember { mutableStateOf(false) }
 
+    val coroutine = rememberCoroutineScope()
+
+    coroutine.launch {
+        delay(2000)
+        window.location.href = "#about"
+    }
     Box(
         modifier =
             Modifier

@@ -46,13 +46,17 @@ fun header() {
                     style = LineStyle.Solid,
                     color = Color.orange,
                 )
-                .borderRadius(20.px),
+                .borderRadius(20.px)
+                .cursor(Cursor.Pointer)
+                .onClick {
+                    window.location.href = "#home"
+                },
         // .boxShadow(blurRadius = 10.px, spreadRadius = 0.2.px, color = Color.orange),
         horizontalArrangement = Arrangement.SpaceBetween,
         verticalAlignment = Alignment.CenterVertically,
     ) {
         leftSide()
-        rightSide(breakpoint = breakpoint)
+        rightSide()
     }
 
     BSOffcanvas(
@@ -95,11 +99,6 @@ private fun leftSide() { // TODO implement hamburger menu for when breakpoint < 
                 .padding(left = 30.px),
     ) {
         Image(
-            modifier =
-                Modifier.onClick {
-                    window.location.href = "#home"
-                }
-                    .cursor(Cursor.Pointer),
             src = "PizzaOvenInPizzaWeTrust.svg",
             description = "Logo Image",
             // modifier = NavigationItemStyle.toModifier()
@@ -109,7 +108,7 @@ private fun leftSide() { // TODO implement hamburger menu for when breakpoint < 
 
 // the nav bar
 @Composable
-private fun rightSide(breakpoint: Breakpoint) {
+private fun rightSide() {
     Row(
         modifier = Modifier.fillMaxWidth(),
         horizontalArrangement = Arrangement.End,
