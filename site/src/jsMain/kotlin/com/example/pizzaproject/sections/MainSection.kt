@@ -28,7 +28,7 @@ import org.jetbrains.compose.web.dom.Iframe
 import org.jetbrains.compose.web.dom.P
 import org.jetbrains.compose.web.dom.Text
 
-const val AGENT_URL = "https://console.dialogflow.com/api-client/demo/embedded/6d1eacba-db34-4f9c-a3e6-2f3bf4757d49"
+const val AGENT_URL = "REDACTED"
 
 @Composable
 fun mainSection() {
@@ -94,7 +94,7 @@ fun mainSection() {
                         modifier = Modifier.fillMaxSize().padding(right = 20.px),
                         contentAlignment = Alignment.TopEnd,
                     ) {
-                        agentIframe()
+                        agentIframe(URL = AGENT_URL)
                     }
                 }
 
@@ -159,12 +159,12 @@ fun mainBackground() {
 }
 
 @Composable
-fun agentIframe() {
+fun agentIframe(URL: String) {
     Iframe(
         attrs = {
             attr("width", "350")
             attr("height", "430")
-            attr("src", AGENT_URL)
+            attr("src", URL)
             attr("allow", "microphone")
         },
     )
